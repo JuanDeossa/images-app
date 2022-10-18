@@ -22,6 +22,11 @@ const createCardNode=(url)=>{
     return card
 }
 
+async function renderCard() {
+    const {image}=await getData(URLs.randomFox)
+    content.appendChild(createCardNode(image))
+}
+
 
 
 
