@@ -27,7 +27,7 @@ async function renderCard() {
     content.appendChild(createCardNode(image))
 }
 
-
+window.addEventListener("load",renderCard)
 
 
 
