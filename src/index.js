@@ -1,3 +1,4 @@
+import registerImage from "./lazy"
 const URLs={
     randomFox:"https://randomfox.ca/floof/"
 }
@@ -15,10 +16,11 @@ async function getData(url) {
 const createCardNode=(url)=>{
     const card=document.createElement("div")
     const img=document.createElement("img")
-    img.loading="lazy"
+    // img.loading="lazy"
     img.className="mx-auto p-2 rounded-3xl"
     img.width="300"
-    img.src=url
+    img.dataset.src=url
+    registerImage(img)
     card.appendChild(img)
     return card
 }
