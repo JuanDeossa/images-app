@@ -28,10 +28,16 @@ const createCardNode=(url)=>{
 async function renderCard() {
     const {image}=await getData(URLs.randomFox)
     content.appendChild(createCardNode(image))
+    clear.classList.remove("hidden")
 }
 
-window.addEventListener("load",renderCard)
+// window.addEventListener("load",renderCard)
 addFox.addEventListener("click",renderCard)
+clear.addEventListener("click",clearContent)
 
-
-
+function clearContent() {
+    while (content.firstChild) {
+        content.removeChild(content.firstChild);
+    }
+    clear.classList.add("hidden")
+}
