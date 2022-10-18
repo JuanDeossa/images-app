@@ -28,6 +28,7 @@ async function renderCard() {
 }
 
 window.addEventListener("load",renderCard)
+addFox.addEventListener("click",renderCard)
 
 
 
